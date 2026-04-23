@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: user-service  # 服务名，必须和Nacos的Data ID前缀一致
+
+  cloud:
+    nacos:
+      # 注册中心
+      discovery:
+        server-addr: 127.0.0.1:8848
+
+      # 配置中心（关键！从这拉取yml）
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yaml   # 后缀，对应Data ID：user-service.yaml
